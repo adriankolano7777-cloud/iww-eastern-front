@@ -1,40 +1,77 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Wojna Światowa – Kampania Interaktywna</title>
+/* TŁO – styl okopów 1915 */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images.unsplash.com/photo-1545578302-06ac32bdd0a4?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 
-    <!-- Czcionki historyczne -->
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Garamond&display=swap" rel="stylesheet">
+    font-family: 'Old Standard TT', serif;
+    color: #f5e6c8;
+    text-shadow: 1px 1px 2px #000;
+}
 
-    <!-- Style -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* TEKST CENTRUM */
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0,0,0,0.55);
+    padding: 40px;
+    border: 2px solid #c7b07b;
+    border-radius: 8px;
+}
 
-    <!-- MENU JĘZYKÓW -->
-    <div class="language-menu">
-        <img src="https://flagcdn.com/w40/pl.png" class="flag" id="lang-btn">
-        <div class="lang-dropdown" id="lang-dropdown">
-            <img src="https://flagcdn.com/w40/gb.png" class="flag">
-            <img src="https://flagcdn.com/w40/de.png" class="flag">
-        </div>
-    </div>
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
 
-    <!-- GŁÓWNY BLOK -->
-    <div class="center-box">
-        <h1>I WOJNA ŚWIATOWA</h1>
-        <h2>Front Wschodni – Kampania Interaktywna</h2>
+h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
 
-        <button class="main-btn">Rozpocznij</button>
-    </div>
+/* PRZYCISK */
+.main-btn {
+    padding: 15px 30px;
+    background: #c7b07b;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
-<script>
-document.getElementById("lang-btn").onclick = () => {
-    document.getElementById("lang-dropdown").classList.toggle("show");
-};
-</script>
+.main-btn:hover {
+    background: #b99d63;
+}
 
-</body>
-</html>
+/* MENU JĘZYKÓW */
+.language-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.flag {
+    width: 40px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+/* DROPDOWN */
+.lang-dropdown {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.lang-dropdown.show {
+    display: flex;
+}
