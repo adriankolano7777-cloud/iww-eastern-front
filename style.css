@@ -1,62 +1,40 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Garamond", serif;
-    background-color: #000;
-}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Wojna Światowa – Kampania Interaktywna</title>
 
-.hero {
-    position: relative;
-    height: 100vh;
-    background-image: url('https://i.imgur.com/aqUydmM.jpeg'); /* można podmienić później */
-    background-size: cover;
-    background-position: center;
-}
+    <!-- Czcionki historyczne -->
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Garamond&display=swap" rel="stylesheet">
 
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-}
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-.content-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    background: rgba(20, 20, 20, 0.6);
-    padding: 30px;
-    border: 2px solid #664;
-    box-shadow: 0 0 20px #000;
-}
+    <!-- MENU JĘZYKÓW -->
+    <div class="language-menu">
+        <img src="https://flagcdn.com/w40/pl.png" class="flag" id="lang-btn">
+        <div class="lang-dropdown" id="lang-dropdown">
+            <img src="https://flagcdn.com/w40/gb.png" class="flag">
+            <img src="https://flagcdn.com/w40/de.png" class="flag">
+        </div>
+    </div>
 
-h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
+    <!-- GŁÓWNY BLOK -->
+    <div class="center-box">
+        <h1>I WOJNA ŚWIATOWA</h1>
+        <h2>Front Wschodni – Kampania Interaktywna</h2>
 
-h2 {
-    font-size: 24px;
-    margin-bottom: 30px;
-}
+        <button class="main-btn">Rozpocznij</button>
+    </div>
 
-.menu-buttons .btn {
-    display: block;
-    margin: 10px auto;
-    padding: 12px 20px;
-    width: 250px;
-    text-decoration: none;
-    color: #fff;
-    background: rgba(60, 40, 20, 0.8);
-    border: 2px solid #775;
-    font-size: 18px;
-    transition: 0.3s;
-}
+<script>
+document.getElementById("lang-btn").onclick = () => {
+    document.getElementById("lang-dropdown").classList.toggle("show");
+};
+</script>
 
-.menu-buttons .btn:hover {
-    background: rgba(90, 60, 30, 0.95);
-    transform: scale(1.05);
-}
+</body>
+</html>
