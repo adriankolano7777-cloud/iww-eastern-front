@@ -3,27 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Wojna Światowa – Front Wschodni</title>
+    <title>I Wojna Światowa – Kampania Interaktywna</title>
+
+    <!-- Czcionki historyczne -->
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Garamond&display=swap" rel="stylesheet">
+
+    <!-- Style -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
-    <div class="title-box">
-        <h1>INTERAKTYWNA KAMPANIA HISTORYCZNA</h1>
-        <h2>I WOJNA ŚWIATOWA – FRONT WSCHODNI</h2>
-        <h3>San 1915 & Gorlice 1915</h3>
+    <!-- MENU JĘZYKÓW -->
+    <div class="language-menu">
+        <img src="https://flagcdn.com/w40/pl.png" class="flag" id="lang-btn">
+        <div class="lang-dropdown" id="lang-dropdown">
+            <img src="https://flagcdn.com/w40/gb.png" class="flag">
+            <img src="https://flagcdn.com/w40/de.png" class="flag">
+        </div>
     </div>
 
-    <div class="menu">
-        <a class="btn" href="#">Rozpocznij</a>
-        <a class="btn" href="#">Wybór języka</a>
-        <a class="btn" href="#">Panel rodzica</a>
+    <!-- GŁÓWNY BLOK -->
+    <div class="center-box">
+        <h1>I WOJNA ŚWIATOWA</h1>
+        <h2>Front Wschodni – Kampania Interaktywna</h2>
+
+        <button class="main-btn">Rozpocznij</button>
     </div>
 
-    <p class="footer">Projekt edukacyjny – Historia Interaktywna</p>
-</div>
+<script>
+document.getElementById("lang-btn").onclick = () => {
+    document.getElementById("lang-dropdown").classList.toggle("show");
+};
+</script>
 
 </body>
 </html>
