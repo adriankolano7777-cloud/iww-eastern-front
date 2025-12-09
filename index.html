@@ -1,40 +1,62 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Wojna Światowa – Kampania Interaktywna</title>
+    <meta charset="UTF-8" />
+    <title>Interaktywna Kampania Historyczna – I Wojna Światowa</title>
 
-    <!-- Czcionki historyczne -->
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Garamond&display=swap" rel="stylesheet">
+    <!-- CZCIONKI GOOGLE -->
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Old+Standard+TT:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
 
-    <!-- Style -->
-    <link rel="stylesheet" href="style.css">
+    <!-- NASZ CSS -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-    <!-- MENU JĘZYKÓW -->
-    <div class="language-menu">
-        <img src="https://flagcdn.com/w40/pl.png" class="flag" id="lang-btn">
-        <div class="lang-dropdown" id="lang-dropdown">
-            <img src="https://flagcdn.com/w40/gb.png" class="flag">
-            <img src="https://flagcdn.com/w40/de.png" class="flag">
+    <!-- GÓRNY PASEK Z WYBOREM JĘZYKA -->
+    <header class="top-bar">
+        <div class="logo-small">
+            I Wojna Światowa – Front Wschodni
         </div>
-    </div>
+        <nav class="language-switcher">
+            <!-- Na razie proste emoji, później możemy podmienić na obrazki flag -->
+            <button class="lang-btn active" data-lang="pl">🇵🇱 PL</button>
+            <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+            <button class="lang-btn" data-lang="de">🇩🇪 DE</button>
+        </nav>
+    </header>
 
-    <!-- GŁÓWNY BLOK -->
-    <div class="center-box">
-        <h1>I WOJNA ŚWIATOWA</h1>
-        <h2>Front Wschodni – Kampania Interaktywna</h2>
+    <!-- GŁÓWNY BLOK ŚRODKOWY -->
+    <main class="hero">
+        <section class="hero-panel">
+            <h1 class="hero-title">
+                INTERAKTYWNA KAMPANIA HISTORYCZNA
+            </h1>
+            <h2 class="hero-subtitle">
+                I WOJNA ŚWIATOWA – FRONT WSCHODNI<br />
+                SAN 1915 &amp; GORLICE 1915
+            </h2>
 
-        <button class="main-btn">Rozpocznij</button>
-    </div>
+            <div class="hero-menu">
+                <button class="hero-btn primary">Rozpocznij</button>
+                <button class="hero-btn">Panel rodzica / konta rodzinne</button>
+                <button class="hero-btn">Kontynuuj (jeśli zapisano postęp)</button>
+            </div>
 
-<script>
-document.getElementById("lang-btn").onclick = () => {
-    document.getElementById("lang-dropdown").classList.toggle("show");
-};
-</script>
+            <p class="hero-footer">
+                Projekt edukacyjny • Historia Interaktywna
+            </p>
+        </section>
+    </main>
 
+    <!-- PROSTE JS NA PRZYSZŁOŚĆ DO JĘZYKÓW (TERAZ TYLKO „kliknięcie”) -->
+    <script>
+        const langButtons = document.querySelectorAll('.lang-btn');
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                langButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                // tutaj później podłączymy faktyczne tłumaczenia
+            });
+        });
+    </script>
 </body>
 </html>
