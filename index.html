@@ -46,7 +46,7 @@
         </p>
 
         <div class="hero-menu">
-          <button class="hero-btn primary">Rozpocznij</button>
+          <button id="start-button" class="btn-main">Rozpocznij</button>
           <button class="hero-btn">Panel rodzica / konta rodzinne</button>
           <button class="hero-btn">Kontynuuj (jeśli zapisano postęp)</button>
         </div>
@@ -58,7 +58,24 @@
     </main>
   </div>
   <audio id="bg-audio" loop>
-  <source src="sounds/artillery.mp3" type="audio/mpeg">
+  <source src="artillery.mp3.mp3" type="audio/mpeg">
 </audio>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const audio = document.getElementById("bg-audio");
+    const startBtn = document.getElementById("start-button");
+
+    if (audio && startBtn) {
+      // Ustawiamy cichą głośność, żeby nie straszyć użytkownika
+      audio.volume = 0.2;
+
+      startBtn.addEventListener("click", function () {
+        audio.play().catch(function (err) {
+          console.log("Nie udało się odtworzyć audio:", err);
+        });
+      });
+    }
+  });
+</script>
 </body>
 </html>
