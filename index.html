@@ -42,13 +42,13 @@
         </h1>
 
         <p class="hero-line">
-          <span class="hero-subsubtitle">SAN 1915 &amp; OFENSYWA GORLICKA</span>
+          <span class="hero-subsubtitle">SAN 1914 &amp; OFENSYWA GORLICKA</span>
         </p>
 
         <div class="hero-menu">
-          <button class="hero-btn">Rozpocznij</button>
+          <button class="hero-btn primary">Rozpocznij</button>
           <button class="hero-btn">Panel rodzica / konta rodzinne</button>
-          <button class="hero-btn">Kontynuuj (jeśli zapisano postęp)</button>
+          <button class="hero-btn">Kontynuuj</button>
         </div>
 
         <p class="hero-footer">
@@ -67,7 +67,7 @@
 
     if (audio && startBtn) {
       // Ustawiamy cichą głośność, żeby nie straszyć użytkownika
-      audio.volume = 0.2;
+      audio.volume = 0.6;
 
       startBtn.addEventListener("click", function () {
         audio.play().catch(function (err) {
