@@ -46,7 +46,7 @@
         </p>
 
         <div class="hero-menu">
-          <button class="hero-btn primary">Rozpocznij</button>
+          <button id="start-button" class="hero-btn primary">Rozpocznij</button>
           <button class="hero-btn">Panel rodzica / konta rodzinne</button>
           <button class="hero-btn">Kontynuuj</button>
         </div>
@@ -67,7 +67,7 @@
 
     if (audio && startBtn) {
       // Ustawiamy cichą głośność, żeby nie straszyć użytkownika
-      audio.volume = 0.6;
+      audio.volume = 0.2;
 
       startBtn.addEventListener("click", function () {
         audio.play().catch(function (err) {
