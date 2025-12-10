@@ -1,62 +1,69 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8" />
-    <title>Interaktywna Kampania Historyczna – I Wojna Światowa</title>
+  <meta charset="UTF-8" />
+  <title>I Wojna Światowa – Front Wschodni</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- CZCIONKI GOOGLE -->
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Old+Standard+TT:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <!-- Czcionki historyczne -->
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Old+Standard+TT:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
 
-    <!-- NASZ CSS -->
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- GÓRNY PASEK Z WYBOREM JĘZYKA -->
+  <div class="page-overlay"></div>
+
+  <!-- Główna zawartość strony -->
+  <div class="page-wrapper">
+    
+    <!-- Górny pasek z wyborem języka -->
     <header class="top-bar">
-        <div class="logo-small">
-            I Wojna Światowa – Front Wschodni
-        </div>
-        <nav class="language-switcher">
-            <!-- Na razie proste emoji, później możemy podmienić na obrazki flag -->
-            <button class="lang-btn active" data-lang="pl">🇵🇱 PL</button>
-            <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
-            <button class="lang-btn" data-lang="de">🇩🇪 DE</button>
-        </nav>
+      <div class="brand">
+        <span class="brand-small">Interaktywna kampania historyczna</span>
+      </div>
+
+      <div class="language-switcher">
+        <button class="lang-btn active" aria-label="Polski">🇵🇱</button>
+        <button class="lang-btn" aria-label="English">🇬🇧</button>
+        <button class="lang-btn" aria-label="Deutsch">🇩🇪</button>
+      </div>
     </header>
 
-    <!-- GŁÓWNY BLOK ŚRODKOWY -->
+    <!-- Główna „tablica” w okopie -->
     <main class="hero">
-        <section class="hero-panel">
-            <h1 class="hero-title">
-                INTERAKTYWNA KAMPANIA HISTORYCZNA
-            </h1>
-            <h2 class="hero-subtitle">
-                I WOJNA ŚWIATOWA – FRONT WSCHODNI<br />
-                SAN 1914 &amp; GORLICE 1915
-            </h2>
+      <div class="lamp">
+        <div class="lamp-glow"></div>
+      </div>
 
-            <div class="hero-menu">
-                <button class="hero-btn primary">Rozpocznij</button>
-                <button class="hero-btn">Panel rodzica / konta rodzinne</button>
-                <button class="hero-btn">Kontynuuj (jeśli zapisano postęp)</button>
-            </div>
+      <section class="hero-card">
+        <h1 class="hero-title">
+          I WOJNA ŚWIATOWA<br />
+          <span class="hero-subtitle">FRONT WSCHODNI 1914–1915</span>
+        </h1>
 
-            <p class="hero-footer">
-                Projekt edukacyjny • Historia Interaktywna
-            </p>
-        </section>
+        <p class="hero-line">
+          <span class="hero-subsubtitle">SAN 1915 &amp; OFENSYWA GORLICKA</span>
+        </p>
+
+        <div class="hero-menu">
+          <button class="hero-btn primary">Rozpocznij</button>
+          <button class="hero-btn">Panel rodzica / konta rodzinne</button>
+          <button class="hero-btn">Kontynuuj (jeśli zapisano postęp)</button>
+        </div>
+
+        <p class="hero-footer">
+          Projekt edukacyjny ~ Historia Interaktywna
+        </p>
+      </section>
     </main>
+  </div>
 
-    <!-- PROSTE JS NA PRZYSZŁOŚĆ DO JĘZYKÓW (TERAZ TYLKO „kliknięcie”) -->
-    <script>
-        const langButtons = document.querySelectorAll('.lang-btn');
-        langButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                langButtons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                // tutaj później podłączymy faktyczne tłumaczenia
-            });
-        });
-    </script>
+  <!-- Dźwięk tła – podłączymy, gdy dodasz plik MP3 -->
+  <!-- Gdy wrzucisz np. artillery.mp3, odkomentuj ten fragment:
+  <audio id="bg-audio" loop autoplay>
+    <source src="artillery.mp3" type="audio/mpeg" />
+  </audio>
+  -->
+
 </body>
 </html>
